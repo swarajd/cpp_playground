@@ -14,6 +14,11 @@ TEST_F(TestProj, BasicTest) {
   ASSERT_EQ(add(1, 1), testint);
 }
 
+TEST_F(TestProj, AnotherTest) {
+  // std::cout << "basic test" << std::endl;
+  ASSERT_EQ(add(1, 2), 3);
+}
+
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();
