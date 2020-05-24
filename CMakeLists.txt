@@ -7,3 +7,7 @@ include(ClangFormat)
 
 add_subdirectory(src)
 add_subdirectory(test)
+
+enable_testing()
+
+add_test(test_all test/unit_tests)
