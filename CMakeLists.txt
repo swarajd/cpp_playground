@@ -12,13 +12,13 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 append_coverage_compiler_flags()
 
+enable_testing()
+
+add_subdirectory(src)
+add_subdirectory(test)
+
 setup_target_for_coverage_gcovr_html(
           NAME coverage
           EXECUTABLE test/unit_tests
           BASE_DIRECTORY "${PROJECT_SOURCE_DIR}/src"
           )
-
-enable_testing()
-
-add_subdirectory(src)
-add_subdirectory(test)
